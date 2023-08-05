@@ -1,11 +1,7 @@
-/**
- * This file is just a silly example to show everything working in the browser.
- * When you're ready to start on your site, clear the file. Happy hacking!
- **/
+const item = document.querySelector('.item');
 
-import confetti from 'canvas-confetti';
+function handleDragStart(e: Event) {
+  console.log(e);
+}
 
-confetti.create(document.getElementById('canvas') as HTMLCanvasElement, {
-  resize: true,
-  useWorker: true,
-})({ particleCount: 200, spread: 200 });
+item!.addEventListener('dragstart', handleDragStart);
